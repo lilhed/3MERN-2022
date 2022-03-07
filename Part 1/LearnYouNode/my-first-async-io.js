@@ -10,7 +10,7 @@ function ReadFile(file) {
 }
 
 ReadFile(process.argv[2]).then((result) => {
-	console.log(result.split('\n').length);
+	console.log(result.split('\n').length -1);
 }, (err) => {
 	console.log(err.message);
 });

@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function ReadDir(dirPath, extension){
+module.exports = function(dirPath, extension, callback){
 	return new Promise((resolve, reject) => {
 		fs.readdir(dirPath, {}, (err, files) => {
 			if (err) return reject(new Error(`${dirPath} is not a directory`));
@@ -9,7 +9,7 @@ function ReadDir(dirPath, extension){
 	}).then((files) => {
 		files.forEach(element => {
 			if(extension){
-				if (element.includes(extension)){
+				if (element.includes(`.${extension}`)){
 					console.log(element);
 				}
 			} else {
@@ -19,8 +19,4 @@ function ReadDir(dirPath, extension){
 	}, (err) => {
 		console.log(err.message);
 	})
-}
-
-module.exports = {
-	ReadDir: ReadDir
 }

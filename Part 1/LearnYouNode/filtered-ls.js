@@ -12,7 +12,7 @@ function ReadDir(dirPath){
 ReadDir(process.argv[2]).then((files) => {
 	files.forEach(element => {
 		if(process.argv[3]){
-			if (element.includes(process.argv[3])){
+			if (element.includes(`.${process.argv[3]}`)){
 				console.log(element);
 			}
 		} else {
