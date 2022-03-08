@@ -1,6 +1,24 @@
 {
-  "name": "3MERN-2022",
+  "name": "3mern-2022",
   "version": "1.0.0",
   "dependencies": {
-  }
+    "express": "^4.17.3",
+    "expressjs": "^1.0.1"
+  },
+  "description": "# Timeline",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilhed/3MERN-2022.git"
+  },
+  "author": "reda_sarmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilhed/3MERN-2022/issues"
+  },
+  "homepage": "https://github.com/lilhed/3MERN-2022#readme"
 }
