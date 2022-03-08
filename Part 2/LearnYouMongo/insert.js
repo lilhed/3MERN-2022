@@ -8,7 +8,12 @@ mongo.connect('mongodb://localhost:27017', (err, client) => {
 		firstName: process.argv[2],
 		lastName: process.argv[3]
 	}).then(document => {
-		console.log(JSON.stringify(document));
+		console.log(
+			JSON.stringify({
+				firstName: process.argv[2],
+				lastName: process.argv[3]
+			})
+		);
 		client.close();
 	})
 });
